@@ -1,0 +1,114 @@
+:root {
+    --prim: #712b81;
+    --sec: #25063b;
+    --white: #f8f8f1;
+    --white-accent: #ffffc4;
+    --red: #9d2438;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--white);
+}
+
+header {
+    color: var(--white);
+    background-color: var(--sec);
+    padding: 0.5rem 1rem;
+}
+
+footer {
+    color: var(--white);
+    background-color: var(--sec);
+    padding: 0.5rem;
+}
+
+nav {
+    background-color: var(--red);
+    padding: 0.5rem 1rem;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        @media (min-width: 370px) {     
+            flex-direction: row;
+            gap: 2rem;
+        }
+        li {
+            button {
+                color: var(--white);
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                &.active {
+                    text-decoration: underline;
+                    color: var(--white-accent);
+                }
+            }
+        }
+    }
+}
+
+section#movies {
+    padding: 1rem;
+    max-width: 1420px;
+    margin: auto;
+    h2 {
+        padding: 0 0 1.25rem;
+    }
+    >div {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        gap: 1rem;
+        article {
+            container: article / inline-size;
+            >div {
+                border: var(--prim) 2px solid;
+                border-radius: 1rem;
+                overflow: hidden;
+                h3 {
+                    color: var(--white);
+                    background-color: var(--prim);
+                    padding: 0.5rem 1rem;
+                    
+                }
+                >div {
+                    display: grid;
+                    @container article (width > 450px) {
+                        grid-template-columns: auto minmax(300px, 1fr);
+                    
+                        }
+                    img {
+                        width: 150px;
+                        height: 225px;
+                        background-color: blue;
+                        margin: 0.25rem auto;
+                        @container article (width > 450px) {
+                            margin: 0;
+                        }
+                    }
+                    >div {
+                        padding: 0.5rem;
+                        p:first-child{
+                            padding-bottom: 1rem;
+                        }
+                        p:last-child {
+                            padding-top: 0.5rem;
+                        }
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>The Movie Database</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><button id="nowPlaying" class="active">Now playing</button></li>
+            <li><button id="popular">Popular</button></li>
+            <li><button id="topRated">Top Rated</button></li>
+            <li><button id="upcoming">Upcoming</button></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="movies">
+            <h2>Now Playing</h2>
+            <div id="movieList">
+                <template id="movieTemplate">
+                    <article>
+                        <div>
+                            <h3 class="title">placeholder</h3>
+                            <div>
+                                <img src="" alt="img" class="poster_path">
+                                <div>
+                                    <p class="overview">A listless Wade Wilson toils away in civilian life with his days
+                                        as the morally
+                                        flexible
+                                        mercenary,
+                                        Deadpool, behind
+                                        him. But when his homeworld faces an existential threat, Wade must reluctantly
+                                        suit-up
+                                        again
+                                        with an
+                                        even more reluctant
+                                        Wolverine.</p>
+                                    <p>Original title: <span class="original_title">placeholder</span></p>
+                                    <p>Release date: <span class="release_date">placeholder</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </template>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+
+</html>
