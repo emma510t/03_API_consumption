@@ -20,22 +20,18 @@ fetchCategory(apiLinkNowPlaying)
 document.querySelector('#nowPlaying').addEventListener('click', ()=>{
     document.querySelector('#movieList').removeChild()
     fetchCategory(apiLinkNowPlaying)
-    console.log('hey')
 })
 document.querySelector('#popular').addEventListener('click', ()=>{
     document.querySelector('#movieList').removeChild()
     fetchCategory(apiLinkPopular)
-    console.log('hey')
 })
 document.querySelector('#topRated').addEventListener('click', ()=>{
     document.querySelector('#movieList').removeChild()
     fetchCategory(apiLinkTopRated)
-    console.log('hey')
 })
 document.querySelector('#upcoming').addEventListener('click', ()=>{
     document.querySelector('#movieList').removeChild()
     fetchCategory(apiLinkUpcoming)
-    console.log('hey')
 })
 
 function fetchCategory(category){
@@ -59,60 +55,3 @@ function getMovies(movies){
         document.querySelector('#movieList').appendChild(template);
     });
 }
-
-
-
-
-
-//Now playing
-
-/* fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
-.then(response => response.json())
-.then(response => getMovies(response))
-.catch(err => console.error(err)); */
-
-/* //Popular
-
-fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
-.then(response => response.json())
-.then(response => console.log(response))
-.catch(err => console.error(err));
-
-//Top Rated
-
-fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
-.then(response => response.json())
-.then(response => console.log(response))
-.catch(err => console.error(err));
-
-//Upcoming
-
-fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', options)
-.then(response => response.json())
-.then(response => console.log(response))
-.catch(err => console.error(err)); */
-
-
-/* 
-results: [
-    {
-        audult: boolean,
-        backdrop_path: string,
-        genre_ids: [
-            number,
-        ],
-        id: number,
-        original_language: string,
-        original_title: string,
-        overview: string,
-        popularity: number
-        poster_path: string,
-        release_date: string,
-        title: string,
-        video: boolean,
-        vote_average: number,
-        vote_count: number
-    }
-]
-
-*/
